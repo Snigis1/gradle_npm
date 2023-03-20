@@ -15,14 +15,14 @@ public class App {
         return "Hello World!";
     }
 
-    
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
         IRender render = new Render();
         IContextBuilder builder = render.newBuilder();
         builder.width(120).height(20);
-        builder.element(new PseudoText("HALLO"));
+        builder.element(new PseudoText("WADUP"));
         ICanvas canvas = render.render(builder.build());
         String s = canvas.getText();
         System.out.println(s);
